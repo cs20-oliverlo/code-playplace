@@ -2,16 +2,32 @@
 
 // Variables
 
-let ballQuestion = document.getElementById("8ball-question")
-let ballSpecificAnswer = document.getElementById("8ball-answer")
+let ballSpecificAnswer = document.getElementById("8ball-answer");
+let ballAnswer = document.getElementById("8ball-answer");
 
 // Event Listeners
 
-document.getElementById("ball-click").addEventListener("click", ballAnswer)
+document.getElementById("ball-click").addEventListener("click", answer);
+
+// Preset Answer Array
+
+const possible8BallAnswer = ["It is certain.", "It is decidedly so.", "Without a doubt.", "Yes definitely.", "You may rely on it.", "As I see it, yes.", "Most likely.", "Outlook good", "Yes.", "Signs point to yes." ,"Reply hazy, try again.", "Ask again later.", "Better not tell you now.", "Cannot predict now.", "Concentrate and ask again.", "Don't count on it.", "My reply is no.", "My sources say no.", "Outlook not so good.", "Very doubtful."];
+
 
 // Function
-function ballAnswer() {
-    
+function answer() {
+    let ballQuestion = document.getElementById("8ball-question").value.toLowerCase();
+
+    if (ballQuestion === "do you say ay-arnav or arnav?") {
+        ballAnswer.innerHTML = "Ay-arnav";
+    } else if (ballQuestion === "what is gagaball?") {
+        ballAnswer.innerHTML = "What.";
+    } else if (ballQuestion === "how many if/else if statements did you do?") {
+        ballAnswer.innerHTML = "3, the else statement not included.";
+    } else {
+    let random = Math.trunc(Math.random() * possible8BallAnswer.length);
+    ballAnswer.innerHTML = possible8BallAnswer[random];
+    }
 }
 
 // Magic 8-Ball End
