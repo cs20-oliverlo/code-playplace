@@ -31,3 +31,39 @@ function answer() {
 }
 
 // Magic 8-Ball End
+
+// Graphics and Animation Demo Start
+
+// Variables
+
+// Set up canvas and 2D graphics context
+let cnv = document.getElementById("myCanvas");
+let ctx = cnv.getContext("2d");
+cnv.width = 600;
+cnv.height = 400;
+
+// Solid Rectangle
+    ctx.fillStyle = "blue";
+    ctx.fillRect(50, 50, 100, 60);
+
+// Outlined Rectangle
+    ctx.strokeStyle = "blue";
+    ctx.lineWidth = 4;
+    ctx.strokeRect(50, 130, 100, 60);
+
+// Solid Text
+    ctx.font = "30px Arial";
+    ctx.fillStyle = "green";
+    ctx.fillText("Canvas Text", 300, 100);
+
+// Outline Text
+    ctx.font = "36px Times";
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = "red";
+    ctx.strokeText("Canvas Text 2", 300, 130);
+
+// Line
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = "blue";
+    ctx.beginPath();
+    ctx.moveTo(75, 50); // Start at (x1, y1)
