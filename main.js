@@ -32,9 +32,9 @@ function answer() {
 
 // Magic 8-Ball End
 
-// Graphics and Animation Demo Start
 
-// Variables
+
+// Graphics and Animation Demo Start
 
 // Set up canvas and 2D graphics context
 let cnv = document.getElementById("myCanvas");
@@ -42,28 +42,44 @@ let ctx = cnv.getContext("2d");
 cnv.width = 600;
 cnv.height = 400;
 
+document.getElementById("blue-rect").addEventListener("click", rectangle1);
+function rectangle1() {
 // Solid Rectangle
+    ctx.clearRect(0, 0, cnv.width, cnv.height)
     ctx.fillStyle = "blue";
     ctx.fillRect(50, 50, 100, 60);
+}
 
+document.getElementById("out-rect").addEventListener("click", rectangle2);
+function rectangle2() {
 // Outlined Rectangle
+ctx.clearRect(0, 0, cnv.width, cnv.height)
     ctx.strokeStyle = "blue";
     ctx.lineWidth = 4;
     ctx.strokeRect(50, 130, 100, 60);
+}
 
+document.getElementById("fillet").addEventListener("click", text1);
+function text1() {
 // Solid Text
+ctx.clearRect(0, 0, cnv.width, cnv.height)
     ctx.font = "30px Arial";
     ctx.fillStyle = "green";
     ctx.fillText("Canvas Text", 300, 100);
+}
 
+document.getElementById("filler").addEventListener("click", text2);
+function text2() {
 // Outline Text
+ctx.clearRect(0, 0, cnv.width, cnv.height)
     ctx.font = "36px Times";
     ctx.lineWidth = 1;
     ctx.strokeStyle = "red";
     ctx.strokeText("Canvas Text 2", 300, 130);
+}
 
-// Line
-    ctx.lineWidth = 5;
-    ctx.strokeStyle = "blue";
-    ctx.beginPath();
-    ctx.moveTo(75, 50); // Start at (x1, y1)
+// // Line
+//     ctx.lineWidth = 5;
+//     ctx.strokeStyle = "blue";
+//     ctx.beginPath();
+//     ctx.moveTo(75, 50); // Start at (x1, y1)
