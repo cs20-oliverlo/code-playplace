@@ -179,4 +179,8 @@ function assignment1() {
     ctx.fillRect(0, 300, 1000, 100);
     ctx.fillStyle = "rgb(0, 0, 255)";
     ctx.fillRect(0, 0, 1000, 300);
+    ctx.fillStyle = "red";
+    ctx.beginPath();
+    ctx.arc(200, 300, 25, 0, 1 * Math.PI);
+    ctx.fill();
 }
